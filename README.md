@@ -14,7 +14,7 @@
 
 -   [Results](#results)
 
--   [Conclusions](#conclusion)
+-   [Conclusions](#conclusions)
 
 -   [References](#references)
 
@@ -22,28 +22,28 @@
 
 ------------------------------------------------------------------------
 
-| Image recognition using deep learning have been prevalent in various industries. Recent real-world application in COVID-19 diagnosis have shed light on how this technique could have prompt deployment in healthcare industry. Any technological device that allows for swift and precise screening of COVID-19 infection could prove invaluable for healthcare providers. Currently, the primary clinical method utilized for diagnosing COVID-19 is Reverse Transcription Polymerase Chain Reaction (RT-PCR), which is costly, relatively less sensitive, and demands specialized medical personnel. X-ray imaging stands out as a readily available alternative that holds promise in COVID-19 diagnosis.
-| 
-| This project aim to replicate the the result with two approaches: self-trained CNNs and pre-trained transfer learning technique.
+> Image recognition using deep learning have been prevalent in various industries. Recent real-world application in COVID-19 diagnosis have shed light on how this technique could have prompt deployment in healthcare industry. Any technological device that allows for swift and precise screening of COVID-19 infection could prove invaluable for healthcare providers. Currently, the primary clinical method utilized for diagnosing COVID-19 is Reverse Transcription Polymerase Chain Reaction (RT-PCR), which is costly, relatively less sensitive, and demands specialized medical personnel. X-ray imaging stands out as a readily available alternative that holds promise in COVID-19 diagnosis.
+>
+> This project aim to replicate the the result with two approaches: self-trained CNNs and pre-trained transfer learning technique.
 
 ### Overview
 
 ------------------------------------------------------------------------
 
-The project uses the database organized and published by Muhammad E. H. Chowdhury et. al,.^1^ The database contains a mixture of 423 COVID-19, 1485 viral pneumonia, and 1579 normal chest X-ray images.
-Two self-trained CNN architectures were deployed, along with three pre-trained CNN architectures: `DenseNet201`^2^, `EfficientNetB7`^3^and `VGG16`^4^ (all trained on the ImageNet Dataset). All architectures were then fine-tuned on the dataset.
-The results obtained from the different architectures were then evaluted and compared.
+> The project uses the database organized and published by Muhammad E. H. Chowdhury et. al,.[1] The database contains a mixture of 423 COVID-19, 1485 viral pneumonia, and 1579 normal chest X-ray images.
+> Two self-trained CNN architectures were deployed, along with three pre-trained CNN architectures: `DenseNet201`[2], `EfficientNetB7`[3]and `VGG16`[4] (all trained on the ImageNet Dataset). All architectures were then fine-tuned on the dataset.
+> The results obtained from the different architectures were then evaluted and compared.
 
 ### Steps
 
 ------------------------------------------------------------------------
 
-| 1. Data exploration&prepossessing
-| 1.1 Data Augmentation
-| 2. Split the dataset
-| 3. Fine-tune CNNs
-| 3.1 Define a learning rate scheduler function, fit the CNN using call backs=learning rate scheduler
-| 3.2 Set optimizer = Adam(learning_rate=0.001)
+1. Data exploration & prepossessing
+> 1. Data Augmentation
+2. Split the dataset
+3. Fine-tune CNNs
+> 1. Define a learning rate scheduler function, fit the CNN using call backs=learning rate scheduler
+> 2. Set optimizer = Adam(learning_rate=0.001)
 
 | Hyper-parameters    |                                                            |
 |---------------------|------------------------------------------------------------|
@@ -56,12 +56,12 @@ The results obtained from the different architectures were then evaluted and com
 |-----------------------------|-----------|
 | `Categorical Cross Entropy` | `Adam`    |
 
-| 4. Fine-tune DenseNet201, EfficientNetB7 and VGG16
-| 4.1 Steps:
-| -The pretrained network is loaded without the final classifcation head.
-| -Freeze the weights of the pretrained network.
-| -Add new head layers to be trained.
-| 
+4. Fine-tune DenseNet201, EfficientNetB7 and VGG16
+> Steps:
+>  1. The pretrained network is loaded without the final classifcation head.
+>  2. Freeze the weights of the pretrained network.
+>  3. Add new head layers to be trained.
+
 
 | Hyper-parameters    |                                                                     |
 |---------------------|---------------------------------------------------------------------|
@@ -102,7 +102,7 @@ The results obtained from the different architectures were then evaluted and com
 
 ------------------------------------------------------------------------
 
-| M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, “Can AI help in screening Viral and COVID-19 pneumonia?” arXiv preprint, 29 March 2020, [Link](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Farxiv.org%2Fabs%2F2003.13145)
-| Gao Huang, Zhuang Liu, Laurens van der Maaten, Kilian Q. Weinberger,"Densely Connected Convolutional Networks",28 Jan 2018, [Link](https://arxiv.org/abs/1608.06993)
-| Mingxing Tan, Quoc V. Le,"EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",11 Sep 2020, [Link](https://arxiv.org/abs/1905.11946)
-| Karen Simonyan, Andrew Zisserman,"Very Deep Convolutional Networks for Large-Scale Image Recognition", 10 Apr 2015,[Link](https://arxiv.org/abs/1409.1556)
+> 1. M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, “Can AI help in screening Viral and COVID-19 pneumonia?” arXiv preprint, 29 March 2020, [Link](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Farxiv.org%2Fabs%2F2003.13145)
+> 2. Gao Huang, Zhuang Liu, Laurens van der Maaten, Kilian Q. Weinberger,"Densely Connected Convolutional Networks",28 Jan 2018, [Link](https://arxiv.org/abs/1608.06993)
+> 3. Mingxing Tan, Quoc V. Le,"EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",11 Sep 2020, [Link](https://arxiv.org/abs/1905.11946)
+> 4. Karen Simonyan, Andrew Zisserman,"Very Deep Convolutional Networks for Large-Scale Image Recognition", 10 Apr 2015,[Link](https://arxiv.org/abs/1409.1556)
