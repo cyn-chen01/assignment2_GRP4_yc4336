@@ -41,7 +41,7 @@
 1. [Data exploration & prepossessing](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/Data%20exploration%20%26%20prepossessing%20.py)
 > 1. Data Augmentation
 2. [Split the dataset](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/Split%20the%20dataset.py)
-3. Fine-tune CNNs
+3. [Fine-tune CNNs](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/CNNs.py)
 > 1. Define a learning rate scheduler function, fit the CNN using call backs=learning rate scheduler
 > 2. Set optimizer = Adam(learning_rate=0.001)
 
@@ -56,7 +56,7 @@
 |-----------------------------|-----------|
 | `Categorical Cross Entropy` | `Adam`    |
 
-4. Fine-tune DenseNet201, EfficientNetB7 and VGG16
+4. [Fine-tune DenseNet201, EfficientNetB7 and VGG16](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/Transfer%20Learning%20Models.py)
 > Steps:
 >  1. The pretrained network is loaded without the final classifcation head.
 >  2. Freeze the weights of the pretrained network.
