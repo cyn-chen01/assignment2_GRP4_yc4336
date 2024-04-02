@@ -6,17 +6,17 @@
 
 ------------------------------------------------------------------------
 
--   [Introduction]
+-   [Introduction](###Introduction)
 
--   [Overview]
+-   [Overview](###Overview)
 
--   [Steps]
+-   [Steps](###Steps)
 
--   [Results]
+-   [Results](###Results)
 
--   [Conclusions]
+-   [Conclusions](###Conclusion)
 
--   [References]
+-   [References](###References)
 
 ### Introduction
 
@@ -30,10 +30,9 @@
 
 ------------------------------------------------------------------------
 
-| The project uses the database organized and published by Muhammad E. H. Chowdhury et. al,.^1^ The database contains a mixture of 423 COVID-19, 1485 viral pneumonia, and 1579 normal chest X-ray images.
-| Two self-trained CNN architectures were deployed, along with three pre-trained CNN architectures: `DenseNet201`^2^, `EfficientNetB7`^3^and `VGG16`^4^ (all trained on the ImageNet Dataset).
-| All architectures were then fine-tuned on the dataset.
-| The results obtained from the different architectures were then evaluted and compared.
+The project uses the database organized and published by Muhammad E. H. Chowdhury et. al,.^1^ The database contains a mixture of 423 COVID-19, 1485 viral pneumonia, and 1579 normal chest X-ray images.
+Two self-trained CNN architectures were deployed, along with three pre-trained CNN architectures: `DenseNet201`^2^, `EfficientNetB7`^3^and `VGG16`^4^ (all trained on the ImageNet Dataset). All architectures were then fine-tuned on the dataset.
+The results obtained from the different architectures were then evaluted and compared.
 
 ### Steps
 
@@ -50,11 +49,8 @@
 |---------------------|------------------------------------------------------------|
 | Learning rate       | CNN1=`0.001`                                               |
 |                     | CNN2 Decay the learning rate exponentially after 10 epochs |
-|---------------------|------------------------------------------------------------|
 | Batch Size          | `69`                                                       |
-|---------------------|------------------------------------------------------------|
 | Number of Epochs    | `15`                                                       |
-|---------------------|------------------------------------------------------------|
 
 | Loss Function               | Optimizer |
 |-----------------------------|-----------|
@@ -67,15 +63,11 @@
 | -Add new head layers to be trained.
 | 
 
-+---------------------+---------------------------------------------------------------------+
 | Hyper-parameters    |                                                                     |
-+=====================+=====================================================================+
+|---------------------|---------------------------------------------------------------------|
 | Learning rate       | Intial=`0.001`Decay the learning rate exponentially after 10 epochs |
-+---------------------+---------------------------------------------------------------------+
 | Batch Size          | `69`                                                                |
-+---------------------+---------------------------------------------------------------------+
 | Number of Epochs    | `15`                                                                |
-+---------------------+---------------------------------------------------------------------+
 
 | Loss Function               | Optimizer |
 |-----------------------------|-----------|
@@ -83,25 +75,13 @@
 
 | Plot running losses & accuracies for each model
 
-+-------------------------+-----------------------------------+
 | Model                   | Plot                              |
-+=========================+===================================+
+|-------------------------|-----------------------------------|
 | CNN1                    | ![](plots/plot_CNN1.png)          |
-+-------------------------+-----------------------------------+
 | CNN2                    | ![](plots/plot_CNN2.png)          |
-+-------------------------+-----------------------------------+
 | Densenet201             | ![](plots/plot_densenet.png) \|   |
-|                         |                                   |
-| Pre-trained on ImageNet |                                   |
-+-------------------------+-----------------------------------+
 | Efnet                   | ![](plots/plot_efnet.png) \|      |
-|                         |                                   |
-| Pre-trained on ImageNet |                                   |
-+-------------------------+-----------------------------------+
 | ![]()VGG                | ![](plots/plot_vgg.png)           |
-|                         |                                   |
-| Pre-trained on ImageNet |                                   |
-+-------------------------+-----------------------------------+
 
 ### Results
 
