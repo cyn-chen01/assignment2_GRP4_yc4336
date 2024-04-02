@@ -40,7 +40,7 @@
 
 1. [Data exploration & prepossessing](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/Data%20exploration%20%26%20prepossessing%20.py)
 > 1. Data Augmentation
-2. Split the dataset
+2. [Split the dataset](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/Split%20the%20dataset.py)
 3. Fine-tune CNNs
 > 1. Define a learning rate scheduler function, fit the CNN using call backs=learning rate scheduler
 > 2. Set optimizer = Adam(learning_rate=0.001)
