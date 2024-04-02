@@ -38,7 +38,7 @@
 
 ------------------------------------------------------------------------
 
-1. Data exploration & prepossessing
+1. [Data exploration & prepossessing](https://github.com/cyn-chen01/assignment2_GRP4_yc4336/blob/main/Data%20exploration%20%26%20prepossessing%20.py)
 > 1. Data Augmentation
 2. Split the dataset
 3. Fine-tune CNNs
